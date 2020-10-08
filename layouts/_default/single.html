@@ -1,3 +1,5 @@
-{{ define "no-difference-to-baseof-here" }}
-<!-- These three lines are a workaround. They are needed to inherit from baseof without changing anything. -->
+{{ define "top-menu" }}
+<nav role="navigation" class="flex-container top-menu go-right">
+    {{ partial "top_menu.html" (dict "Page" . "show_back_menu_item" false) }}
+</nav>
 {{ end }}

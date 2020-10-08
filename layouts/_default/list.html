@@ -1,3 +1,9 @@
+{{ define "top-menu" }}
+<nav role="navigation" class="flex-container top-menu go-right">
+    {{ partial "top_menu.html" (dict "Page" . "show_back_menu_item" false) }}
+</nav>
+{{ end }}
+
 {{ define "section_content" }}
 <article class="flex-container">
     {{ .Content }}
@@ -13,6 +19,9 @@
                 {{.Title | markdownify}}
             </a>
         </li>
+        <div class="flex-container summary">
+            {{ .Params.summary | safeHTML }}
+        </div>
         {{ end }}
     </ul>
 </nav>
